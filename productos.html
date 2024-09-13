@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Productos</title>
+    <link rel="stylesheet" href="productos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-container">
+            <ul class="sidebar">
+                <div class="logo">
+                    <img src="img/c1.png" alt="imagen-logo">
+                    <h2 class="blanco">Otto</h2>
+                    <h2 class="rojo">Krause</h2>
+                </div>
+                <li onclick=hideSidebar() class="sidebarbig2"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li><a class="blanco" href="http://127.0.0.1:5500/pagina%20web%201/index.html">Inicio</a></li>
+                <li><a class="rojo" href="#">Productos</a></li>
+                <li><a class="blanco" href="https://www.instagram.com/mario_store_krause/">Contacto</a></li>
+                <li><a class="rojo" href="#">Login</a></li>
+            </ul>
+            <nav class="navbar">
+                <ul>
+                    <div class="logo">
+                        <img src="img/c1.png" alt="imagen-logo">
+                        <h2 class="blanco">Otto</h2>
+                        <h2 class="rojo">Krause</h2>
+                    </div>
+                    <li><a class="hideOnmobile"  href="#MARIOSTORE" id="blanco">Inicio</a></li>
+                    <li><a class="hideOnmobile" href="#" id="rojo">Productos</a></li>
+                    <li><a class="hideOnmobile" href="https://www.instagram.com/mario_store_krause/" id="blanco" >Contacto</a></li>
+                    <li><a class="hideOnmobile"  href="#" id="rojo">Login</a></li>
+                    <li onclick=showSidebar() class="sidebarbig"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M100.782-212.303v-106.001h758.436v106.001H100.782Zm0-214.696v-106.002h758.436v106.002H100.782Zm0-214.697v-106.001h758.436v106.001H100.782Z"/></svg></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Carrusel-->
+       <div class="carruselFotos">
+           <div class="carousel">
+               <button class="prev but" onclick="moveSlide(-1)">&#10094;</button>
+               <div class="carousel-images">
+                   <img src="img/nashe.jpg" alt="Imagen 1" class="slide active">
+                   <img src="img/nashe.jpg" alt="Imagen 2" class="slide">
+                   <img src="img/nashe.jpg" alt="Imagen 3" class="slide">
+               </div>
+               <button class="next but" onclick="moveSlide(1)">&#10095;</button>
+           </div>
+       </div>
+   </header>
+      <!--Filtros-->
+    <nav>
+        <div class="filtros">
+            <input type="text" id="campoBusqueda" placeholder="Buscar...">
+            <select class="filtro-select butones" id="filtroCategoria"></select>
+            <button class="filtro-button butones" id="botonPobreza" type="button">pobreza</button>
+            <button class="filtro-button butones" id="botonPlata" type="button">plata</button>
+            <button id="btnMostrarCarrito" class="filtro-button carrito">Carrito 🐐 </button>
+        </div>
+    </nav>
+
+ 
+  <!---Productos-->
+    <main>
+        <div id="listaProductosHtml">
+        </div>
+    </main>
+
+    <!---carrito-->
+    <section>
+        <div style="display: none;" class="carritoModelo">
+            <div class="productosCarrito">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ProductosComprados">
+                    </tbody>
+                </table>
+                <p> Total $ <span id="carritoTotal"></span></p>
+            </div>
+                <button class="btn" id="btnCerrarCarrito" type="button" >Cerrar</button>
+                <button class="btn" id="btnComprar" type="button" >Comprar</button>
+        </div>
+
+    </section>
+    
+    <script src="Scripts/productos.js"></script> 
+    <script src="Scripts/carritou.js"></script>
+    <script src="Scripts/carrusel.js"></script>
+    <script src="Scripts/navbar.js"></script>
+</body>
+</html>

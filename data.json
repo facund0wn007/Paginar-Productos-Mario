@@ -1,0 +1,107 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Pancho",
+            "precio": 1200,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 1
+        },
+        {
+            "id": 2,
+            "nombre": "Pizza",
+            "precio": 1000,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 1
+        },
+        {
+            "id": 3,
+            "nombre": "Empanada",
+            "precio": 1200,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 1
+        },
+        {
+            "id": 4,
+            "nombre": "Hamburguesa",
+            "precio": 1300,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 1
+        },
+        {
+            "id": 5,
+            "nombre": "Chupetin",
+            "precio": 200,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 2
+        },
+        {
+            "id": 6,
+            "nombre": "Caramelos",
+            "precio": 100,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 2
+        },
+        {
+            "id": 7,
+            "nombre": "Alfajor Oreo",
+            "precio": 500,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 2
+        },
+        {
+            "id": 8,
+            "nombre": "Oreos",
+            "precio": 1000,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 2
+        },
+        {
+            "id": 9,
+            "nombre": "Coca-Cola 500cc",
+            "precio": 1200,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 3
+        },
+        {
+            "id": 10,
+            "nombre": "Pepsi 500cc",
+            "precio": 1000,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 3
+        },
+        {
+            "id": 11,
+            "nombre": "Agua Mediana 500cc",
+            "precio": 1500,
+            "stock":100,
+            "imagen": "https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 3
+        },
+        {
+            "id": 12,
+            "nombre": "Placer",
+            "precio": 600,
+            "stock":100,
+            "imagen":"https://pbs.twimg.com/media/E7FMi4mXoAQ1wCl.jpg",
+            "id_categoria": 3
+        }
+    ],
+    "categoria": [
+        { "id_categoria": 0, "name": "TODAAAAAA"},
+        { "id_categoria": 1, "name": "Comidas"},
+        { "id_categoria": 2, "name": "Dulces"},
+        { "id_categoria": 3, "name": "Bebidas"},
+        { "id_categoria": 4, "name": "wasa"}
+    ]
+}

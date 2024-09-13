@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+body{
+    margin: 0;
+    background-color: #dcdcdcf6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    margin: 20px;
+    background-image: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url(images/Mario.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 80vh;
+}
+
+.navbar  {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  /*Aqui el "fondo" de la navbar*/
+  .navbar{
+   background-color: rgba(0, 0, 0, 0.267);
+   backdrop-filter: blur(10px);
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  /*Acomodamos un poco el posicionamiento y agregamos la transition*/
+  .navbar li {
+   height: 50px;
+   padding-top: 13px;
+   transition: all 0.3s;
+  }
+
+  /*Esto es lo que hace que las letras se vuelvan un poco mas grande, si se saca la decoracion de lo rojo se buguea y se tiene que acomodar*/
+  .navbar li:hover{
+    transform: scale(1.1);
+  }
+  
+  .navbar a {
+    height: 100%;
+    padding: 0 73px;
+    text-decoration: none;
+    align-items: center;
+    color: #F9FAFC;
+  }
+
+  /*Aqui nos dedicamos a hacer la animacion que se encuentra bajo las letras de la navbar, tamaño, posicion y transicion*/
+  .navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition-duration: .3s;
+  }
+
+  .navbar a:hover::after{
+    transform: scaleX(1);
+  }
+
+/*Acomodamos el boton que abre la side bar en la navbar*/
+  .navbar .sidebarbig {
+    height: 100%;
+    padding: 0 73px;
+    text-decoration: none;
+    align-items: center;
+    color: #F9FAFC;
+    margin-top: 9px;
+  }
+
+  /*De aqui hasta rojo hover, es todo para acomodar las letras de colores tanto de la navbar como la sidebar, ademas dl cambio de color cada que pones el mouse encima*/
+  #blanco{
+    color: #F9FAFC;
+    transition: all 0.3s;
+    text-shadow: -1px -1px 10px rgb(230, 221, 221) ;
+  }
+
+  #blanco:hover{
+    transform: scale(1.1);
+  }
+
+  .blanco{
+    color: #F9FAFC;
+    transition: all 0.3s;
+    text-shadow: -1px -1px 10px rgb(230, 221, 221) ;
+  }
+
+  .blanco:hover{
+    transform: scale(1.1);
+  }
+
+  #rojo{
+    color: red;
+    transition: all 0.3s;
+    text-shadow: -1px -1px 10px rgb(221, 6, 6) ;
+  }
+
+  #rojo:hover{
+    transform: scale(1.1);
+  }
+
+  .rojo{
+    color: red;
+    transition: all 0.3s;
+    text-shadow: -1px -1px 10px rgb(221, 6, 6) ;
+  }
+
+  .rojo:hover{
+    transform: scale(1.1);
+  }
+ 
+  /*Esto permite el acomodar las letras del logo en la navbar (El otto krause)*/
+  .logo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+  }
+
+  .header .logo img:hover{
+    transform: scale(1.2);
+  }
+
+  /*Aqui acomodamos y hacemos la sidebar, basicamente igual a la navbar, agregandole una capa mayor en el z index*/
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 250vh;
+    background-color: rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+
+  }
+
+  .sidebar li {
+    height: 70px;
+    transition: all 0.3s;
+   }
+   
+   .sidebar a {
+     height: 100%;
+     width: 100%;
+     padding: 40px 35px;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+   }
+   
+   .sidebar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition-duration: .3s;
+  }
+
+  .sidebar a:hover::after{
+    transform: scaleX(1);
+  }
+
+  /*Aqui Personalizaremos el "abrir y cerrar" la sidebar*/
+   .sidebarbig{
+    filter: invert(23%) sepia(93%) saturate(6573%) hue-rotate(356deg) brightness(103%) contrast(124%);
+    transition: all 0.3s;
+  }
+
+   .sidebarbig:hover{
+    filter: invert(95%) sepia(45%) saturate(802%) hue-rotate(177deg) brightness(111%) contrast(97%);
+    transform: scale(1.1);
+  }
+
+   .sidebarbig2{
+    filter: invert(95%) sepia(45%) saturate(802%) hue-rotate(177deg) brightness(111%) contrast(97%);
+    transition: all 0.3s;
+    margin-top: 40px;
+  }
+
+   .sidebarbig2:hover{
+    filter: invert(23%) sepia(93%) saturate(6573%) hue-rotate(356deg) brightness(103%) contrast(124%);
+    transform: scale(1.1);
+  }
+
+  /* Esto @media nos permite que cuando un celular o tablet entre a la pagina, se oculte la navbar exceptuando el logo y el "abrir" de la side bar, asi solo se usa la side bar*/
+   @media(max-width: 1052px){
+    .hideOnmobile{
+      display: none;
+    }
+   }
+
+.carruselFotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    margin-top: 80px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.but {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Aqui empieza toda la parte de la barra de Filtros */
+
+.filtros {
+    margin: 30px 0px;
+    padding: 20px;
+    /*background-color: #5c0000; */
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+}
+
+#campoBusqueda {
+    width: 1200px; /* Ancho del cuadro de texto */
+    height: 50px; /* Alto del cuadro de texto */
+    padding-left: 15px; /* Espacio interno dentro del cuadro */
+    font-size: 20px; /* Tamaño de la fuente */
+    border: 5px solid #1d1b1b; /* Borde del cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.butones {
+    margin: auto;
+    height: 50px; /* Alto del cuadro de texto */
+    font-size: 16px;
+}
+
+.filtro-select {
+  appearance: none; /* Remueve el estilo por defecto del navegador */
+  /*background: linear-gradient(135deg, #4b0909, #cf0000); */
+  background: linear-gradient(135deg, #760e0eec, #e62525e4);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none; /* Quita el borde de enfoque */
+}
+
+.filtro-select:hover {
+  /*background: linear-gradient(135deg, #cf0000, #4b0909);*/
+  background: linear-gradient(135deg, #e62525e4, #760e0eec);
+}
+
+.filtro-button {
+  /*background: linear-gradient(135deg, #4b0909, #cf0000); */
+  background: linear-gradient(135deg, #760e0eec, #e62525e4);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtro-button:hover {
+  /*background: linear-gradient(135deg, #cf0000, #4b0909);*/
+  background: linear-gradient(135deg, #e62525e4, #760e0eec); 
+}
+
+/* Aqui empieza toda la parte de los Productos */
+
+#listaProductosHtml {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    /*background-color: #b0b1b2;*/
+    background-color: #888888;
+    border: 5px solid #cf0000;
+    border-radius: 10px;
+}
+.producto {
+    /*background-color: #494949;*/
+    background-color: #dcdcdcf6;
+    /* background: linear-gradient(135deg, #760e0eec, #e62525e4); */
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    margin: 30px;
+    color: #1b1b1b;
+}
+.producto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px 10px 0px 10px;
+}
+
+.producto button{
+  background: linear-gradient(135deg, #760e0eec, #e62525e4);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.884);
+}
+
+#titulou {
+  font-size: 18px;
+}
+
+.agregar {
+  font-size: 16px;
+  padding: 8px;
+  margin: 10px;
+}
+
+.producto input {
+  appearance: none; /* Elimina el estilo predeterminado */
+  /* background: linear-gradient(135deg, #646462e4, #a1a19cca); */
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  color: rgba(26, 26, 26, 0.884);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: text;
+  transition: all 0.3s ease;
+  outline: none; /* Quita el borde de enfoque */
+  text-align: center;
+  width: 150px; /* Ajusta el ancho según sea necesario */
+}
+
+.producto input::-webkit-outer-spin-button,
+.producto input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
