@@ -42,7 +42,7 @@ const cargarProductos=(lista)=>{
                 <img src="${producto.imagen}">
                 <p class="agregar">${producto.precio}</p>
                 <input type="number" id="cantidad-${producto.id}" min="1" value="1">
-                <button class="agregar" data-id="${producto.id}">Agregar al carrito</button>
+                <button class="agregar" data-id="${producto.id}">Agregar</button>
         </div>`
     });
     const agregarBotones = document.querySelectorAll('.agregar');
